@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História do JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
+</head>
+<body>
+<script>window.alert("Seja-Vindo ao site do Vinicius");</script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">História do JS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#aboutJS">Sobre JS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#relation">Relação com HTML/CSS/PHP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+                    <li class="nav-item">
+                        <button id="exitBtn" class="btn btn-outline-warning nav-link">SAIR</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        
+    <section class="hero d-flex justify-content-center align-items-center text-center text-white" style="background-image: url('essa.jpg');">
+        <div class="container">
+            <h1 class="display-4">A História do JavaScript</h1>
+            <p class="lead">Explore o impacto do JavaScript na web moderna e sua relação com outras tecnologias.</p>
+            <a href="#aboutJS" class="btn btn-warning btn-lg">Descubra Mais</a>
+        </div>
+    </section>
+
+    <section id="aboutJS" class="py-5 text-center">
+        <div class="container">
+            <h2>O que é JavaScript?</h2>
+            <p class="lead">JavaScript foi criado em 1995 por Brendan Eich enquanto trabalhava na Netscape Communications. Inicialmente conhecido como "Mocha", depois "LiveScript", e finalmente renomeado para JavaScript. Tornou-se essencial para a web moderna, permitindo a criação de interações dinâmicas em páginas web.JavaScript é uma linguagem de programação que permite a você implementar itens complexos em páginas web — toda vez que uma página da web faz mais do que simplesmente mostrar a você informação estática — mostrando conteúdo que se atualiza em um intervalo de tempo, mapas interativos ou gráficos 2D/3D animados, etc. — você pode apostar que o JavaScript provavelmente está envolvido. É a terceira camada do bolo das tecnologias padrões da web, duas das quais (HTML e CSS) nós falamos com muito mais detalhes em outras partes da Área de Aprendizado.</p>
+        </div>
+    </section>
+
+    <section id="relation" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Relação do JavaScript com HTML, CSS e PHP</h2>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card" onclick="showCuriosity('JavaScript permite a manipulação do DOM, que é uma interface de programação para HTML, o que facilita a interação dinâmica em uma página web.')">
+                        <img src="site-html-css-1024x579-1.jpg" class="card-img-top" alt="HTML e CSS">
+                        <div class="card-body">
+                            <h5 class="card-title">HTML e CSS</h5>
+                            <p class="card-text">JS trabalha junto com HTML e CSS para criar interfaces ricas e interativas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" onclick="showCuriosity('Com a ajuda do Node.js, o JavaScript também pode ser utilizado no lado do servidor, semelhante ao PHP.')">
+                        <img src="php-wallpaper.jpg" class="card-img-top" alt="PHP">
+                        <div class="card-body">
+                            <h5 class="card-title">PHP</h5>
+                            <p class="card-text">JS e PHP podem ser combinados para criar back-ends poderosos e dinâmicos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" onclick="showCuriosity('O advento do AJAX possibilitou a comunicação assíncrona entre o navegador e o servidor, facilitando o desenvolvimento de aplicações web dinâmicas.')">
+                        <img src="AJAX.jpg" class="card-img-top" alt="AJAX">
+                        <div class="card-body">
+                            <h5 class="card-title">AJAX</h5>
+                            <p class="card-text">AJAX usa JavaScript para permitir a comunicação assíncrona com o servidor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Email: historiajs@contato.com | Telefone: (42) 99134-7998</p>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <ul class="list-unstyled d-flex justify-content-center">
+                <li><a href="#" class="text-white mx-3"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"></a></li>
+                <li><a href="#" class="text-white mx-3"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a></li>
+                <li><a href="#" class="text-white mx-3"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="curiosityModal" tabindex="-1" aria-labelledby="curiosityModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="curiosityModalLabel">Curiosidade</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="curiosityContent"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+
+
+      function showCuriosity(curiosity) {
+        document.getElementById('curiosityContent').innerText = curiosity;
+        var curiosityModal = new bootstrap.Modal(document.getElementById('curiosityModal'));
+        curiosityModal.show();
+      }
+
+      document.getElementById('exitBtn').addEventListener('click', function() {
+        const userConfirmed = confirm('Obrigado por visitar a história do JavaScript! Deseja realmente sair do site?');
+        if (userConfirmed) {
+            window.location.href = 'https://www.google.com';
+        }
+      });
+    </script>
+
+</body>
+</html>
